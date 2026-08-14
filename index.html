@@ -511,7 +511,7 @@ async function doLogin() {
   const errEl = document.getElementById('lgerr');
   errEl.classList.remove('show');
   if (!u || !p) { errEl.textContent = '⚠️ Username & password wajib diisi'; errEl.classList.add('show'); return; }
-  if (API_URL.indexOf('TEMPEL_URL') === 0) { errEl.textContent = '⚠️ API_URL Apps Script belum diisi di kode'; errEl.classList.add('show'); return; }
+  if (API_URL.indexOf('https://script.google.com/macros/s/AKfycbxu84Q3AUxHLW-NZ_Fs7wElmTHHeVdoAgL6LNrj6NoSmnT8VYpw8QyfSBGfnka3IgHGlQ/exec') === 0) { errEl.textContent = '⚠️ API_URL Apps Script belum diisi di kode'; errEl.classList.add('show'); return; }
   const btn = document.getElementById('lgbtn'); btn.disabled = true; btn.textContent = '⏳ Memeriksa...';
   try {
     const r = await apiGet({ action: 'login', username: u, password: p });
